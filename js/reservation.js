@@ -52,7 +52,7 @@ if ($('#reservation-form').length) {
             submitHandler: function(form){
                 $.ajax({
                     type: "POST",
-                    url:"mail.php",
+                    url:"./includes/mail.php",
                     data: $(form).serialize(),
                     success: function() {
                         document.getElementById('alert-success').style.display = 'block';
@@ -60,7 +60,6 @@ if ($('#reservation-form').length) {
 
                     error: function(){
                         document.getElementById('alert-error').style.display = 'block';
-                       
                     }
                 });
             }
